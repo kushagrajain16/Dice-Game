@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: rgb(44, 44, 44);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 25vmin;
+  aspect-ratio: 1;
+  cursor: pointer;
+  transition: transform 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dice {
+  position: relative;
+  width: 25vmin;
+  aspect-ratio: 1;
+  border-radius: 1vmin;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50% -12.5vmin;
+  transform: rotateX(180deg) rotateY(180deg);
+  transition: transform 2s ease-in-out;
+}
+
+.face {
+  position: absolute;
+  background: radial-gradient(circle at center, rgb(196, 196, 196), rgb(235, 235, 235));
+  width: 25vmin;
+  aspect-ratio: 1;
+  border-radius: 1vmin;
+  transform: rotateX(0deg) rotateY(180deg);
+  transform-origin: 50% 50% -12.5vmin;
+}
+
+.face:nth-child(1) {
+  transform: rotateY(0deg);
+}
+
+.face:nth-child(2) {
+  transform: rotateY(90deg);
+}
+
+.face:nth-child(3) {
+  transform: rotateY(180deg);
+}
+
+.face:nth-child(4) {
+  transform: rotateY(270deg);
+}
+
+.face:nth-child(5) {
+  transform: rotateX(90deg);
+}
+
+.face:nth-child(6) {
+  transform: rotateX(270deg);
+}
+
+.point {
+  position: absolute;
+  width: 5vmin;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  align-self: center;
+  justify-self: center;
+  background: linear-gradient(135deg, rgb(173, 173, 173), #000);
+}
+
+.dot-top {
+  top: 2.5vmin;
+}
+
+.dot-middle {
+  top: 10vmin;
+}
+
+.dot-bottom {
+  bottom: 2.5vmin;
+}
+
+.dot-left {
+  left: 2.5vmin;
+}
+
+.dot-center {
+  left: 10vmin;
+}
+
+.dot-right {
+  right: 2.5vmin;
+}
+
+#dispatch-roll {
+  padding: 10px 12px;
+  border: none;
+  width: 100%;
+  border-radius: 1vmin;
+  cursor: pointer;
+  margin-top: 2vmin;
+  background: linear-gradient(45deg, rgb(189, 189, 189),rgb(255, 255, 255));
+  font-weight: bolder;
+  transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
