@@ -4,18 +4,6 @@ const dice = document.querySelector('.dice');
 
 const rollMax = 5;
 
-
-
-const tossBtn = document.getElementById("tossBtn");
-const result = document.getElementById("result");
-
-tossBtn.addEventListener("click", () => {
-  const coinValue = Math.floor(Math.random() * 2) === 0 ? "Heads" : "Tails";
-  result.textContent = `You got ${coinValue}!`;
-});
-
-
-
 let angleX = 0;
 let angleY = 0;
 let result = 1;
